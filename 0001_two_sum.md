@@ -1,4 +1,4 @@
-### [1\. Two SumCopy for MarkdownCopy for Markdown](https://leetcode.com/problems/two-sum/)
+### [1. Two sum](https://leetcode.com/problems/two-sum/)
 
 Difficulty: **Easy**
 
