@@ -48,32 +48,33 @@ class Solution {
 public:
     int maxDistToClosest(vector<int>& seats) {
         
-        vector<int> left(seats.size(),seats.size());
-        vector<int> right(seats.size(),seats.size());
+        int n = seats.size(), ret = 0;
+        vector<int> left(n,n);
+        vector<int> right(n,n);
         
-        for (int i = 0; i < seats.size(); ++i)
+        for (int i = 0; i < n; ++i)
         {
             if (seats[i] == 1)
                 left[i] = 0;
             else if (i > 0)
-                left[i] = left[i-1] + 1;
+                left[i] = left[i-1]+1;
         }
         
-        for (int j = seats.size()-1; j >= 0; --j)
+        for (int i = n-1; i >= 0; --i)
         {
-            if (seats[j] == 1)
-                right[j] = 0;
-            else if (j < seats.size() - 1)
-                right[j] = right[j+1] + 1;
+            if (seats[i] == 1)
+                right[i] = 0;
+            else if (i < n - 1)
+            {
+                right[i] = right[i+1]+1;
+            }
         }
-        
-        int ret = 0;
-        
-        for (int k = 0; k < seats.size(); ++k)
-        {
-            if (seats[k] == 0)
-                ret = max(ret,min(left[k],right[k]));
-        }
+​
+        for (int i = 0; i < n; ++i)
+        {
+            if (seats[i] == 0)
+                ret = max(ret,min(left[i],right[i]));
+        }
         
         return ret;
     }
