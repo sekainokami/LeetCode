@@ -20,7 +20,8 @@ Output: 2
 Explanation:
 If Alex sits in the second open seat (seats[2]), then the closest person has distance 2.
 If Alex sits in any other open seat, the closest person has distance 1.
-Thus, the maximum distance to the closest person is 2.```
+Thus, the maximum distance to the closest person is 2.
+```
 
 
 **Example 2:**
