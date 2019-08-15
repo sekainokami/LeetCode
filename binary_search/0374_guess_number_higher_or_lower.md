@@ -39,26 +39,19 @@ int guess(int num);
 class Solution {
 public:
     int guessNumber(int n) {
-        
-        int left = 1;
-        int right = n;
-        
-        while (left < right)
-        {
-            // Do not use (left + right) / 2, because it may cause int overflow
-            int mid = left + (right-left) / 2;
-            int ret = guess(mid);
-            if (ret == 0)
-                return mid;
-            else if (ret == -1)
-                right = mid;
-            else if (ret == 1)
-                left = mid + 1;
-        }
-        
-        return left;
-        
-        
+        int l = 1, u = n;
+        while (l <= n)
+        {
+            int m = l + (u-l)/2;
+            int res = guess(m);
+            if (res== 0)
+                return m;
+            else if (res==-1)
+                u = m - 1;
+            else
+                l = m + 1;
+        }
+        return -1;
     }
 };
 ```
