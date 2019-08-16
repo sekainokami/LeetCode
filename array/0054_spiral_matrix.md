@@ -76,5 +76,4 @@ public:
         
     }
 };
-                nexty < 0 || nexty >= m || seen[nexty][nextx])
 ```
