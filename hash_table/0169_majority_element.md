@@ -11,7 +11,8 @@ You may assume that the array is non-empty and the majority element always exist
 
 ```
 Input: [3,2,3]
-Output: 3```
+Output: 3
+```
 
 **Example 2:**
 
