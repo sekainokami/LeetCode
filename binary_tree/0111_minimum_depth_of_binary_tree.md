@@ -40,7 +40,7 @@ Language: **C++**
  */
 class Solution {
 public:
-    // DFS
+    /* DFS
     int minDepth(TreeNode* root) {
         if (!root){
             return 0;
@@ -53,8 +53,9 @@ public:
         }
         return min(minDepth(root->left), minDepth(root->right)) + 1;
     }
+    */
     
-    /* BFS
+    // BFS
         int minDepth(TreeNode* root) {
         if (!root)
             return 0;
@@ -79,4 +80,10 @@ public:
                     q.push(node->right);
                 q.pop();
             }
+            level++;
+            
+        }
+        return level;
+    }
+};
 ```
