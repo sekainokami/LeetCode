@@ -53,5 +53,30 @@ public:
         }
         return -1;
     }
+
+    /*
+    // A[i] - [i] must be non-decreasing array
+    // Binary search solution
+    int fixedPoint(vector<int>& A) {
+     int left = 0, right = A.size()-1;
+     int res = right;
+
+     while (left <= right)
+     {
+         int mid = left + (right-left) / 2;
+         if (A[mid]-mid == 0)
+         {
+             res = min(res,mid);
+             right = mid - 1;
+         }
+         else if (A[mid]-mid < 0)
+             left = mid + 1;
+         else
+             right = mid - 1;
+     }
+
+     return A[res] == res ? res : -1;
+    }
+    */
 };
 ```
