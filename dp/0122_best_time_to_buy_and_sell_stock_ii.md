@@ -33,7 +33,8 @@ Explanation: Buy on day 1 (price = 1) and sell on day 5 (price = 5), profit = 5-
 ```
 Input: [7,6,4,3,1]
 Output: 0
-Explanation: In this case, no transaction is done, i.e. max profit = 0.```
+Explanation: In this case, no transaction is done, i.e. max profit = 0.
+```
 
 
 #### Solution

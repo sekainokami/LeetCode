@@ -12,7 +12,8 @@ Given _n_ non-negative integers representing an elevation map where the width of
 
 ```
 Input: [0,1,0,2,1,0,1,3,2,1,2,1]
-Output: 6```
+Output: 6
+```
 
 
 #### Solution
