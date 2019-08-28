@@ -26,7 +26,8 @@ Explanation: The input binary string 00000000000000000000000010000000 has a tot
 ```
 Input: 11111111111111111111111111111101
 Output: 31
-Explanation: The input binary string 11111111111111111111111111111101 has a total of thirty one '1' bits.```
+Explanation: The input binary string 11111111111111111111111111111101 has a total of thirty one '1' bits.
+```
 
 **Note:**
 
