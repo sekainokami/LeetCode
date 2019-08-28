@@ -28,7 +28,7 @@ return its depth = 3.
 Language: **C++**
 
 ```c++
-/**
+/*
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;

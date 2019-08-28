@@ -25,7 +25,7 @@ Output: [1,3,2]```
 Language: **C++**
 
 ```c++
-/**
+/*
  * Definition for a binary tree node.
  * struct TreeNode {
  *     int val;
