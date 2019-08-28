@@ -29,6 +29,9 @@ return its minimum depth = 2.
 Language: **C++**
 
 ```c++
+/*
+ * Definition for a binary tree node.
+ * struct TreeNode {
  *     int val;
  *     TreeNode *left;
  *     TreeNode *right;
@@ -76,11 +79,4 @@ public:
                     q.push(node->right);
                 q.pop();
             }
-            level++;
-            
-        }
-        return level;
-    }
-    */
-};
 ```
