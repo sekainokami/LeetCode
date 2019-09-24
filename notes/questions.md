@@ -1,4 +1,4 @@
-1. What is the difference between a process and a thread?
+1. What is the difference between a process and a thread?  
 process = program + the states of all threads executing in the program  
 process = heavy weight  
 thread = light weight 
@@ -16,3 +16,11 @@ thread = light weight
         * Memory is not shared between processes
         * Mutexes not necessary (unless threading in the new process)
         * One GIL (global interpreter lock) for each process
+    - GIL
+        * In CPython, only 1 thread is allowed at a given moment
+        * No performance gain for multithreading for CPU intensive tasks
+        * Threading is useful for modularity, to minimize the idle time of CPU, to save time because the resources can be shared among the threads
+
+3. Difference between concurrent and parallel:
+    * concurrent = multiple things in process at the same time
+    * parallel = executing simultaneously
