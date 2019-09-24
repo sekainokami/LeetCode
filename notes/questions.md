@@ -9,7 +9,7 @@ thread = light weight
         * Starting a thread is faster than starting a process
         * Memory is shared between all threads
         * Mutexes often necessary to control access to shared data
-        * On GIL (global interpreter lock) for all threads
+        * One GIL (global interpreter lock) for all threads
     - Multiprocessing:
         * A new process is started independent from the first process
         * Starting a process is slower than starting a thread
