@@ -1,7 +1,7 @@
 1. What is the difference between a process and a thread?
-process = program + the states of all threads executing in the program
-process = heavy weight
-thread = light weight
+process = program + the states of all threads executing in the program  
+process = heavy weight  
+thread = light weight 
 
 2. When would you use multiprocessing  and when multithreading?
     - Multithreading:
