@@ -9,17 +9,17 @@ You may assume that there is only lower case English letters in both **s** and *
 
 A subsequence of a string is a new string which is formed from the original string by deleting some (can be none) of the characters without disturbing the relative positions of the remaining characters. (ie, `"ace"` is a subsequence of `"abcde"` while `"aec"` is not).
 
-**Example 1:**
+**Example 1:**  
 **s** = `"abc"`, **t** = `"ahbgdc"`
 
 Return `true`.
 
-**Example 2:**
+**Example 2:**  
 **s** = `"axc"`, **t** = `"ahbgdc"`
 
 Return `false`.
 
-**Follow up:**
+**Follow up:**  
 If there are lots of incoming S, say S1, S2, ... , Sk where k >= 1B, and you want to check one by one to see if T has its subsequence. In this scenario, how would you change your code?
 
 
@@ -31,16 +31,18 @@ Language: **C++**
 class Solution {
 public:
     bool isSubsequence(string s, string t) {
-        
-        int slow = 0;
-        
-        for (int fast = 0; fast < t.size(); ++fast)
+     
+        int start = 0;
+        for (int i = 0; i < s.size();++i)
         {
-            if (t[fast] == s[slow])
-                slow ++;
+            size_t pos = t.find_first_of(s[i],start);
+            if (pos == string::npos)
+                return false;
+            start = pos + 1;
         }
         
-        return slow == s.size();
+        return true;
+        
     }
 };
 ```

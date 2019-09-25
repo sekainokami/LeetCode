@@ -29,37 +29,36 @@ Language: **C++**
 class Solution {
 public:
     
-    void solve(string& digits, int index, string & curr,
+    void solve(string& digits, string& curr,
                vector<string>& res, vector<string>& book)
     {
-        // Index points to the current digit to convert
-        if (index == digits.size())
+        if (curr.size() == digits.size())
         {
             res.push_back(curr);
             return;
         }
-    
-        for (int i = 0; i < book[digits[index]-'0'].size(); ++i)
+        
+        int index = curr.size();
+        string choices = book[digits[index]-'0'];
+        for (int i = 0; i < choices.size(); ++i)
         {
-            curr += book[digits[index]-'0'][i];
-            // Move to add next char
-            solve(digits,index+1,curr,res,book);
-            // Backtrack to the previous state
+            curr += choices[i];
+            solve(digits,curr,res,book);
             curr.pop_back();
         }
     }
     
+    
     vector<string> letterCombinations(string digits) {
         
-        if (digits.empty()) return vector<string>{};
+        if (digits.empty()) return {};
         
         vector<string> book = {"","","abc","def",
                                "ghi","jkl","mno",
-                              "pqrs","tuv","wxyz"};
-        
+                               "pqrs","tuv","wxyz"};
         vector<string> res;
         string curr;
-        solve(digits,0,curr,res,book);
+        solve(digits,curr,res,book);
         return res;
     }
 };
